@@ -1,13 +1,14 @@
 <script setup>
 import { ref } from 'vue';
 const copywrite = ref(new Date().getFullYear());
+const href = ref('https://github.com/bradtraversy');
+copywrite.value = copywrite.value + 1;
 </script>
 
 <template>
   <footer>
     <p>
-      Created by <a href="https://github.com/bradtraversy" target="_blank" rel="noopener noreferrer">Brad Traversy</a> |
-      Copyright &copy;
+      Created by <a :href target="_blank" rel="noopener noreferrer">Brad Traversy</a> | Copyright &copy;
       {{ copywrite }}
     </p>
   </footer>
