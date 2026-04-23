@@ -1,25 +1,32 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+const factsArray = [
+  {
+    property: "I'm Lightweight",
+    description: "I am incredibly small and fast! My core library is only around 30KB, so I won't slow you down.",
+  },
+  {
+    property: "I'm Approachable",
+    description:
+      'Easy to learn and use, even for beginners. I have a gentle learning curve, clear documentation, and a supportive community.',
+  },
+  {
+    property: "I'm Versatile",
+    description:
+      "I can handle everything from simple interactive elements to complex single-page applications. I'm great for small projects and large-scale applications alike.",
+  },
+];
+
+const arrOfFacts = ref(factsArray);
+</script>
 
 <template>
   <main>
-    <section>
-      <h2>I'm <span class="highlight">Lightweight</span></h2>
-      <p>I am incredibly small and fast! My core library is only around 30KB, so I won't slow you down.</p>
+    <section v-for="facts in arrOfFacts" v-bind:key="facts.property"">
+      <h2><span class="highlight">{{facts.property}}</span></h2>
+      <p>{{ facts.description }}</p>
     </section>
-    <section>
-      <h2>I'm <span class="highlight">Approachable</span></h2>
-      <p>
-        Easy to learn and use, even for beginners. I have a gentle learning curve, clear documentation, and a supportive
-        community.
-      </p>
-    </section>
-    <section>
-      <h2>I'm <span class="highlight">Versatile</span></h2>
-      <p>
-        I can handle everything from simple interactive elements to complex single-page applications. I'm great for
-        small projects and large-scale applications alike.
-      </p>
-    </section>
+
   </main>
 </template>
 
