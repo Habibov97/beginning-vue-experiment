@@ -8,6 +8,7 @@ import Form from './components/Form.vue';
 import PassingProps from './components/PassingProps.vue';
 import { reactive, ref } from 'vue';
 import AddContact from './components/AddContact.vue';
+import CounterApp from './components/CounterApp.vue';
 
 const ownerName = ref('mastery@mail.ru');
 
@@ -44,7 +45,7 @@ function onAddContact(contact) {
 </script>
 
 <template>
-  <div class="container">
+  <!-- <div class="container">
     <div class="header-container">
       <input type="text" v-model="ownerName" />
       <div v-for="contact in contacts" :key="contact.name">
@@ -59,7 +60,9 @@ function onAddContact(contact) {
     </div>
 
     <AddContact @add-contact="onAddContact($event)" />
-  </div>
+  </div> -->
+
+  <CounterApp />
 </template>
 
 <style scoped>
