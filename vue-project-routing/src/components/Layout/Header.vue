@@ -30,7 +30,11 @@
 
       <div class="hidden md:block">
         <form>
-          <a class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition cursor-pointer">Login</a>
+          <router-link
+            :to="{ name: 'login' }"
+            class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition cursor-pointer"
+            >Login</router-link
+          >
         </form>
       </div>
     </div>
